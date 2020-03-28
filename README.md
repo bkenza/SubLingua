@@ -1,5 +1,9 @@
 # SubLingua 📚
 
+## Course 🎯
+
+* SOEN357: User Interface Design
+* Professor: Marta Kersten
 
 ## Objective 🎯
 Welcome to SubLingua! The purpose of our software application is to help people learn new languages using AR (augmented reality).
