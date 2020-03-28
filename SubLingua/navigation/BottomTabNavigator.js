@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import TabBarIcon from '../components/TabBarIcon';
+import TabBarLabel from '../components/TabBarLabel';
 import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
 
@@ -24,10 +25,10 @@ export default function BottomTabNavigator ({ navigation, route }) {
         }}
       />
       <BottomTab.Screen
-        name="Links"
+        name="About"
         component={LinksScreen}
         options={{
-          title: 'Guide',
+          title: 'About',
           tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-book" />,
         }}
       />
