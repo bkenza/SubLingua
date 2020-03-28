@@ -5,10 +5,10 @@ import * as Font from 'expo-font';
 import { Ionicons } from '@expo/vector-icons';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-
 import BottomTabNavigator from './navigation/BottomTabNavigator';
 import useLinking from './navigation/useLinking';
-import Main from './screens/Main';
+import Camera from './screens/Camera';
+import FirstScreen from './screens/FirstScreen';
 
 const Stack = createStackNavigator();
 
@@ -40,7 +40,6 @@ export default function App (props) {
         SplashScreen.hide();
       }
     }
-
     loadResourcesAndDataAsync();
   }, []);
 
@@ -52,8 +51,9 @@ export default function App (props) {
         {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
         <NavigationContainer ref={containerRef} initialState={initialNavigationState}>
           <Stack.Navigator>
+            <Stack.Screen name="First" component={FirstScreen} />
             <Stack.Screen name="Root" component={BottomTabNavigator} />
-            <Stack.Screen name="Main" component={Main} />
+            <Stack.Screen name="Camera" component={Camera} />
           </Stack.Navigator>
         </NavigationContainer>
       </View>

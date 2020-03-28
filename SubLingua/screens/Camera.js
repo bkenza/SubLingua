@@ -1,12 +1,14 @@
 import * as React from 'react';
 import { View, Text } from 'react-native';
 
-function Main () {
+function Camera ({ navigation }) {
+    navigation.setOptions({ headerShown: true, headerTitle: '' });
+
     return (
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-            <Text>Main Screen</Text>
+            <Text>Camera Screen</Text>
         </View>
     );
 }
 
-export default Main;
+export default Camera;
