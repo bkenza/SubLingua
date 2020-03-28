@@ -7,7 +7,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import BottomTabNavigator from './navigation/BottomTabNavigator';
 import useLinking from './navigation/useLinking';
-import Camera from './screens/Camera';
+import CameraScreen from './screens/CameraScreen';
 import FirstScreen from './screens/FirstScreen';
 
 const Stack = createStackNavigator();
@@ -53,7 +53,7 @@ export default function App (props) {
           <Stack.Navigator>
             <Stack.Screen name="First" component={FirstScreen} />
             <Stack.Screen name="Root" component={BottomTabNavigator} />
-            <Stack.Screen name="Camera" component={Camera} />
+            <Stack.Screen name="CameraScreen" component={CameraScreen} />
           </Stack.Navigator>
         </NavigationContainer>
       </View>

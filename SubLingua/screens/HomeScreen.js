@@ -22,7 +22,7 @@ export default function HomeScreen ({ navigation }) {
       <TouchableOpacity>
 
         <View style={styles.cameraButtonContainer}>
-          <Button title='GO TO CAMERA' color='#fff' style={styles.cameraButton} onPress={() => navigation.navigate('Camera')}></Button>
+          <Button title='GO TO CAMERA' color='#fff' style={styles.cameraButton} onPress={() => navigation.navigate('CameraScreen')}></Button>
         </View>
       </TouchableOpacity>
 
