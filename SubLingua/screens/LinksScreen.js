@@ -4,13 +4,13 @@ import { Ionicons } from '@expo/vector-icons';
 import * as WebBrowser from 'expo-web-browser';
 import { RectButton, ScrollView } from 'react-native-gesture-handler';
 
-export default function LinksScreen() {
+export default function LinksScreen () {
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
       <OptionButton
         icon="md-school"
-        label="Read the Expo documentation"
-        onPress={() => WebBrowser.openBrowserAsync('https://docs.expo.io')}
+        label="View our GitHub"
+        onPress={() => WebBrowser.openBrowserAsync('https://github.com/bkenza/SubLingua')}
       />
 
       <OptionButton
@@ -29,7 +29,7 @@ export default function LinksScreen() {
   );
 }
 
-function OptionButton({ icon, label, onPress, isLastOption }) {
+function OptionButton ({ icon, label, onPress, isLastOption }) {
   return (
     <RectButton style={[styles.option, isLastOption && styles.lastOption]} onPress={onPress}>
       <View style={{ flexDirection: 'row' }}>
@@ -50,7 +50,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#fafafa',
   },
   contentContainer: {
-    paddingTop: 15,
+    paddingTop: 50,
+    top: 50
   },
   optionIconContainer: {
     marginRight: 12,

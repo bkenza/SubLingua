@@ -8,10 +8,11 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import BottomTabNavigator from './navigation/BottomTabNavigator';
 import useLinking from './navigation/useLinking';
+import Main from './screens/Main';
 
 const Stack = createStackNavigator();
 
-export default function App(props) {
+export default function App (props) {
   const [isLoadingComplete, setLoadingComplete] = React.useState(false);
   const [initialNavigationState, setInitialNavigationState] = React.useState();
   const containerRef = React.useRef();
@@ -19,7 +20,7 @@ export default function App(props) {
 
   // Load any resources or data that we need prior to rendering the app
   React.useEffect(() => {
-    async function loadResourcesAndDataAsync() {
+    async function loadResourcesAndDataAsync () {
       try {
         SplashScreen.preventAutoHide();
 
@@ -52,6 +53,7 @@ export default function App(props) {
         <NavigationContainer ref={containerRef} initialState={initialNavigationState}>
           <Stack.Navigator>
             <Stack.Screen name="Root" component={BottomTabNavigator} />
+            <Stack.Screen name="Main" component={Main} />
           </Stack.Navigator>
         </NavigationContainer>
       </View>
@@ -62,6 +64,6 @@ export default function App(props) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#1eb2a6',
   },
 });
