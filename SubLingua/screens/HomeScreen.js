@@ -3,30 +3,29 @@ import { Image, StyleSheet, Text, TouchableOpacity, View, Button } from 'react-n
 import { ScrollView } from 'react-native-gesture-handler';
 
 export default function HomeScreen ({ navigation }) {
+  navigation.setOptions({ headerShown: false, headerTitle: '' });
   return (
     <View style={styles.container}>
       <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-        <View style={styles.welcomeContainer}>
+        <View style={styles.imageContainer}>
           <Image
-            source={
-              __DEV__
-                ? require('../assets/images/books.png')
-                : require('../assets/images/robot-prod.png')
-            }
-            style={styles.welcomeImage}
+            source={require('../assets/images/people.png')}
+            style={styles.objectsImage}
           />
         </View>
 
-        <View style={styles.getStartedContainer}>
-          <Text style={styles.getStartedText}>SubLingua</Text>
+        <View style={styles.textContainer}>
+          <Text style={styles.welcomeText}>Welcome to SubLingua!</Text>
+          <Text style={styles.description}>Our language learning application takes advantage of the latest object detection technology to help people all around the world learn new languages in a fun and contructive way!</Text>
         </View>
       </ScrollView>
-
       <TouchableOpacity>
-        <View style={styles.tabBarInfoContainer}>
-          <Button title='GET STARTED' color='#1eb2a6' style={styles.getStartedButton} onPress={() => navigation.navigate('Main')}></Button>
+
+        <View style={styles.cameraButtonContainer}>
+          <Button title='GO TO CAMERA' color='#fff' style={styles.cameraButton} onPress={() => navigation.navigate('CameraScreen')}></Button>
         </View>
       </TouchableOpacity>
+
 
     </View>
   );
@@ -39,47 +38,50 @@ HomeScreen.navigationOptions = {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#1eb2a6',
+    backgroundColor: '#fff',
   },
   contentContainer: {
     paddingTop: 30,
   },
-  welcomeContainer: {
-    alignItems: 'center',
-    marginTop: 200,
-    marginBottom: 20,
-  },
-  welcomeImage: {
-    width: 200,
-    height: 160,
-    // resizeMode: 'contain',
-    marginTop: 25,
-    marginLeft: -10,
-  },
-  getStartedContainer: {
-    alignItems: 'center',
-    marginHorizontal: 50,
-  },
-  getStartedText: {
+  welcomeText: {
+    color: '#000',
+    fontWeight: 'bold',
     fontSize: 25,
-    color: '#fff',
-    lineHeight: 24,
     textAlign: 'center',
-    fontWeight: 'bold'
+    marginBottom: 10
   },
-  tabBarInfoContainer: {
+  description: {
+    color: '#000',
+    fontSize: 20,
+    textAlign: 'center',
+    marginTop: 20,
+  },
+  imageContainer: {
+    // width: 100,
+    // height: 100,
+  },
+  objectsImage: {
+    width: 400,
+    height: 300,
+    marginTop: 10,
+    marginBottom: 10
+  },
+  textContainer: {
+    marginTop: 30,
+    left: 10,
+    marginRight: 10
+  },
+  cameraButtonContainer: {
     position: 'absolute',
-    bottom: 180,
+    bottom: 80,
     left: 100,
     right: 100,
     alignItems: 'center',
-    backgroundColor: '#fff',
+    backgroundColor: '#1eb2a6',
     paddingVertical: 10,
-    borderRadius: 30
+    borderRadius: 30,
   },
-  getStartedButton: {
-    // width: "90%",
-    // height: "8%",
+  cameraButton: {
     fontSize: 25,
     bottom: "8%",
     justifyContent: "center",
