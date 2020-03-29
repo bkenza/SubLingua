@@ -41,7 +41,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   contentContainer: {
-    paddingTop: 30,
+    // paddingTop: 30,
+    paddingTop: "2%"
   },
   welcomeText: {
     color: '#000',
@@ -69,7 +70,9 @@ const styles = StyleSheet.create({
   },
   cameraButtonContainer: {
     position: 'absolute',
-    bottom: 80,
+    bottom: 20,
+    // top: "-2%",
+    // top: "-10%",
     left: 100,
     right: 100,
     alignItems: 'center',

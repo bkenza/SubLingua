@@ -52,7 +52,8 @@ export default function App (props) {
         <NavigationContainer ref={containerRef} initialState={initialNavigationState}>
           <Stack.Navigator>
             <Stack.Screen name="First" component={FirstScreen} />
-            <Stack.Screen name="Root" component={BottomTabNavigator} />
+            <Stack.Screen name="Home" component={BottomTabNavigator} />
+            <Stack.Screen name="Guide" component={BottomTabNavigator} />
             <Stack.Screen name="CameraScreen" component={CameraScreen} />
           </Stack.Navigator>
         </NavigationContainer>
