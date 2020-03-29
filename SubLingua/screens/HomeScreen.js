@@ -7,6 +7,7 @@ export default function HomeScreen ({ navigation }) {
   return (
     <View style={styles.container}>
       <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
+
         <View style={styles.imageContainer}>
           <Image
             source={require('../assets/images/people.png')}
@@ -19,13 +20,12 @@ export default function HomeScreen ({ navigation }) {
           <Text style={styles.description}>Our language learning application takes advantage of the latest object detection technology to help people all around the world learn new languages in a fun and contructive way!</Text>
         </View>
       </ScrollView>
-      <TouchableOpacity>
 
+      <TouchableOpacity>
         <View style={styles.cameraButtonContainer}>
           <Button title='GO TO CAMERA' color='#fff' style={styles.cameraButton} onPress={() => navigation.navigate('CameraScreen')}></Button>
         </View>
       </TouchableOpacity>
-
 
     </View>
   );
@@ -55,10 +55,6 @@ const styles = StyleSheet.create({
     fontSize: 20,
     textAlign: 'center',
     marginTop: 20,
-  },
-  imageContainer: {
-    // width: 100,
-    // height: 100,
   },
   objectsImage: {
     width: 400,
