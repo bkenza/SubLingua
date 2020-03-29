@@ -3,6 +3,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import TabBarIcon from '../components/TabBarIcon';
 import LinksScreen from '../screens/LinksScreen';
 import HomeScreen from '../screens/HomeScreen';
+import GuideScreen from '../screens/GuideScreen';
 
 const BottomTab = createBottomTabNavigator();
 const INITIAL_ROUTE_NAME = 'Home';
@@ -11,7 +12,7 @@ export default function BottomTabNavigator ({ navigation, route }) {
   // Set the header title on the parent stack navigator depending on the
   // currently active tab. Learn more in the documentation:
   // https://reactnavigation.org/docs/en/screen-options-resolution.html
-  navigation.setOptions({ headerShown: true });
+  navigation.setOptions({ headerShown: true, getHeaderTitle: 'Home' });
 
   return (
     <BottomTab.Navigator initialRouteName={INITIAL_ROUTE_NAME}>
@@ -25,7 +26,7 @@ export default function BottomTabNavigator ({ navigation, route }) {
       />
       <BottomTab.Screen
         name="Guide"
-        component={HomeScreen}
+        component={GuideScreen}
         options={{
           title: 'Guide',
           tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-book" />,

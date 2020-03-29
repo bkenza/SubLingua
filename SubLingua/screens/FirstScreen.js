@@ -21,12 +21,12 @@ export default function FirstScreen ({ navigation }) {
 
             <TouchableOpacity>
                 <View style={styles.homepageButtonContainer}>
-                    <Button title='HOMEPAGE' color='#1eb2a6' style={styles.homepageButton} onPress={() => navigation.navigate('Root')}></Button>
+                    <Button title='HOMEPAGE' color='#1eb2a6' style={styles.homepageButton} onPress={() => navigation.navigate('Home')}></Button>
                 </View>
             </TouchableOpacity>
             <TouchableOpacity>
                 <View style={styles.guideButtonContainer}>
-                    <Button title='GUIDE' color='#1eb2a6' style={styles.homepageButton} onPress={() => navigation.navigate('Root')}></Button>
+                    <Button title='CAMERA' color='#1eb2a6' style={styles.homepageButton} onPress={() => navigation.navigate('CameraScreen')}></Button>
                 </View>
             </TouchableOpacity>
 
