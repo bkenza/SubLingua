@@ -9,28 +9,29 @@ export default function LinksScreen ({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <View style={styles.textContainer}>
-
-        <Text style={styles.text}>About this application</Text>
-        <Text style={styles.description}>SubLingua is a language learning application that was created for our User Interface Design
-        class at Concordia University. It uses the Clarifai object recognition API to identify objects
-        on captured images. The returned prediction is then translated to Romanian and the user can see
-        both words in a dialog box that appears on the screen.
-        </Text>
-        <Text style={styles.text}>Clarifai API</Text>
-        <Text style={styles.name}>Founded in 2013, Clarifai's powerful image and video recognition solutions are built on the most advanced
-        machine learning platform and made easily accessible via API, device SDK and on-premise, empowering businesses all
-        over the world to build a new generation of intelligent applications.
-        </Text>
-
-        <Text style={styles.text}>Contributors</Text>
-        <Text style={styles.name}>Kenza Boulisfane - 40043521</Text>
-        <Text style={styles.name}>Zohal Mir - 40033246</Text>
-        <Text style={styles.name}>Loujain Al-Nakeeb - 40076090</Text>
-        <Text style={styles.name}>David Ronci - 26565549</Text>
-      </View>
-
       <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
+
+        <View style={styles.textContainer}>
+
+          <Text style={styles.text}>About this application</Text>
+          <Text style={styles.description}>SubLingua is a language learning application that was created for our User Interface Design
+          class at Concordia University. It uses the Clarifai object recognition API to identify objects
+          on captured images. The returned prediction is then translated to Romanian and the user can see
+          both words in a dialog box that appears on the screen.
+        </Text>
+          <Text style={styles.text}>Clarifai API</Text>
+          <Text style={styles.name}>Founded in 2013, Clarifai's powerful image and video recognition solutions are built on the most advanced
+          machine learning platform and made easily accessible via API, device SDK and on-premise, empowering businesses all
+          over the world to build a new generation of intelligent applications.
+        </Text>
+
+          <Text style={styles.text}>Contributors</Text>
+          <Text style={styles.name}>Kenza Boulisfane - 40043521</Text>
+          <Text style={styles.name}>Zohal Mir - 40033246</Text>
+          <Text style={styles.name}>Loujain Al-Nakeeb - 40076090</Text>
+          <Text style={styles.nameLast}>David Ronci - 26565549</Text>
+        </View>
+
         <OptionButton
           icon="md-school"
           label="View our GitHub"
@@ -64,7 +65,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fafafa',
   },
   contentContainer: {
-    paddingTop: '5%',
+    paddingVertical: '1%',
   },
   textContainer: {
     // paddingTop: '4%'
@@ -84,6 +85,11 @@ const styles = StyleSheet.create({
   name: {
     fontSize: 18,
     paddingHorizontal: "5%",
+  },
+  nameLast: {
+    fontSize: 18,
+    paddingHorizontal: '5%',
+    paddingBottom: '5%'
   },
   optionIconContainer: {
     marginRight: 12,
