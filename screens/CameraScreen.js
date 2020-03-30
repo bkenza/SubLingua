@@ -24,7 +24,6 @@ export default function CameraScreen ({ navigation }, props) {
      * Asynchronous method that takes a picture when the user presses the capture button
      * and then sends the image in base64 form to the identifyImage() method
      */
-
     const capturePhoto = async () => {
         if (camera) {
             // Pause the camera's preview
@@ -53,7 +52,7 @@ export default function CameraScreen ({ navigation }, props) {
     const identifyImage = (imageData) => {
         // Identify the image
         app.models.predict(Clarifai.GENERAL_MODEL, { base64: imageData })
-            .then((response) => displayResult(response.outputs[0].data.concepts[2].name)
+            .then((response) => displayResult(response.outputs[0].data.concepts[0].name)
                 .catch((err) => alert(err))
             );
     }
@@ -95,7 +94,6 @@ export default function CameraScreen ({ navigation }, props) {
         <Camera style={{ flex: 1 }} type={type} ref={ref => (camera = ref)}>
             <ActivityIndicator size="large" style={styles.loadingIndicator} color="#fff" animating={loading} />
             <TouchableHighlight style={styles.captureButton} disabled={loading}>
-                {/* <Button color={'white'} onPress={capturePhoto} disabled={loading} title="CAPTURE" accessibilityLabel="Learn more about this button" /> */}
                 <Button color={'white'} onPress={capturePhoto} disabled={loading} title="" accessibilityLabel="Learn more about this button" />
             </TouchableHighlight>
         </Camera >

@@ -3,7 +3,9 @@ import { Image, StyleSheet, Text, TouchableOpacity, View, Button } from 'react-n
 import { ScrollView } from 'react-native-gesture-handler';
 
 export default function HomeScreen ({ navigation }) {
+
   navigation.setOptions({ headerShown: false, headerTitle: '' });
+
   return (
     <View style={styles.container}>
       <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
@@ -41,7 +43,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   contentContainer: {
-    // paddingTop: 30,
     paddingTop: "2%"
   },
   welcomeText: {
@@ -71,8 +72,6 @@ const styles = StyleSheet.create({
   cameraButtonContainer: {
     position: 'absolute',
     bottom: 20,
-    // top: "-2%",
-    // top: "-10%",
     left: 100,
     right: 100,
     alignItems: 'center',

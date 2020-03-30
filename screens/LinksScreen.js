@@ -68,7 +68,6 @@ const styles = StyleSheet.create({
     paddingVertical: '1%',
   },
   textContainer: {
-    // paddingTop: '4%'
   },
   text: {
     fontSize: 27,
@@ -80,7 +79,6 @@ const styles = StyleSheet.create({
   description: {
     fontSize: 18,
     paddingHorizontal: "5%",
-    // paddingTop: "5%"
   },
   name: {
     fontSize: 18,

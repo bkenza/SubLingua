@@ -54,7 +54,6 @@ const styles = StyleSheet.create({
     welcomeImage: {
         width: 200,
         height: 160,
-        // resizeMode: 'contain',
         marginTop: 25,
         marginLeft: -10,
     },
