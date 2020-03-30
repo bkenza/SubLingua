@@ -21,12 +21,12 @@ export default function FirstScreen ({ navigation }) {
 
             <TouchableOpacity>
                 <View style={styles.homepageButtonContainer}>
-                    <Button title='HOMEPAGE' color='#1eb2a6' style={styles.homepageButton} onPress={() => navigation.navigate('Home')}></Button>
+                    <Button title='HOMEPAGE' color='#1eb2a6' style={styles.buttonStyling} onPress={() => navigation.navigate('Home')}></Button>
                 </View>
             </TouchableOpacity>
             <TouchableOpacity>
-                <View style={styles.guideButtonContainer}>
-                    <Button title='CAMERA' color='#1eb2a6' style={styles.homepageButton} onPress={() => navigation.navigate('CameraScreen')}></Button>
+                <View style={styles.cameraButtonContainer}>
+                    <Button title='CAMERA' color='#1eb2a6' style={styles.buttonStyling} onPress={() => navigation.navigate('CameraScreen')}></Button>
                 </View>
             </TouchableOpacity>
 
@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
         paddingVertical: 10,
         borderRadius: 30
     },
-    guideButtonContainer: {
+    cameraButtonContainer: {
         position: 'absolute',
         bottom: 110,
         left: 100,
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
         paddingVertical: 10,
         borderRadius: 30
     },
-    homepageButton: {
+    buttonStyling: {
         fontSize: 25,
         bottom: "8%",
         justifyContent: "center",
