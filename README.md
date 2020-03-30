@@ -19,12 +19,11 @@ Welcome to SubLingua! The purpose of our software application is to help people 
 ## Technologies 💻
 * React Native
 * Jest
-* Clarifai
+* Clarifai API
 
 ## Initial Environment Setup
 `$ cd directory/of/git/repo`  
-`$ npm init` # follow instructions  
-`$ npm install`  
+`$ yarn install`  
 `$ expo start` 
 
 ## Running the Project Locally 🏠

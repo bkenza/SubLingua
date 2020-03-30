@@ -20,6 +20,11 @@ export default function CameraScreen ({ navigation }, props) {
     const [identifiedAs, setIdentifiedAs] = useState('');
 
 
+    /**
+     * Asynchronous method that takes a picture when the user presses the capture button
+     * and then sends the image in base64 form to the identifyImage() method
+     */
+
     const capturePhoto = async () => {
         if (camera) {
             // Pause the camera's preview
@@ -40,15 +45,25 @@ export default function CameraScreen ({ navigation }, props) {
         }
     };
 
+    /**
+     * This method takes in an image in base64 form and sends it to the Clarifai API
+     * who then predicts what the image contains, and then sends the results to the displayResult() methods
+     * @param {*} imageData 
+     */
     const identifyImage = (imageData) => {
         // Identify the image
         app.models.predict(Clarifai.GENERAL_MODEL, { base64: imageData })
-            .then((response) => displayAnswer(response.outputs[0].data.concepts[0].name)
+            .then((response) => displayResult(response.outputs[0].data.concepts[2].name)
                 .catch((err) => alert(err))
             );
     }
 
-    const displayAnswer = (identifiedImage) => {
+    /**
+     * This method displays the result fetched from the clarifai API and displays it
+     * on the camera screen in the form of an alert
+     * @param {*} identifiedImage 
+     */
+    const displayResult = (identifiedImage) => {
         setIdentifiedAs(identifiedImage);
         let name = identifiedImage;
         console.log(name);
