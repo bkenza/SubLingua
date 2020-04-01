@@ -63,9 +63,10 @@ export default function CameraScreen ({ navigation }, props) {
      * @param {*} identifiedImage 
      */
     const displayResult = (identifiedImage) => {
+        // TODO: Fix this
         setIdentifiedAs(identifiedImage);
         let name = identifiedImage;
-        console.log(name);
+        // console.log(name);
 
         setLoading(false);
 
