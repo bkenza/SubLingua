@@ -27,6 +27,7 @@ const wordDict = {
     shears: 'foarfece',
     flatware: 'farfurie',
     leather: 'piele',
+    'no person': 'nicio persoană'
 };
 
 // Initialize Clarifai api
@@ -38,7 +39,7 @@ const app = new Clarifai.App({
 });
 process.nextTick = setImmediate;
 
-export default function CameraScreen({ navigation }, props) {
+export default function CameraScreen ({ navigation }, props) {
     navigation.setOptions({ headerShown: true, headerTitle: '' });
 
     const [hasPermission, setHasPermission] = useState(null);
