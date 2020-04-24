@@ -1,6 +1,6 @@
 # SubLingua 📚
 
-## Course 🎯
+## Course 
 
 * SOEN357: User Interface Design
 * Professor: Marta Kersten
