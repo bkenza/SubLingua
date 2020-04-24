@@ -25,7 +25,13 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.soen357.sublingua",
+      "buildNumber": "1.0.0"
+    },
+    "android": {
+      "package": "com.soen357.sublingua",
+      "versionCode": 1
     }
   }
 }
