@@ -3,6 +3,7 @@
     "name": "SubLingua",
     "slug": "SubLingua",
     "privacy": "public",
+    "description": "SubLingua is a simple translation mobile application that uses object recognition. It was built using React Native and the Clarifai API. The current version is a beta version.",
     "sdkVersion": "36.0.0",
     "platforms": [
       "ios",
