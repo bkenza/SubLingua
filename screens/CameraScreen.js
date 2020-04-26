@@ -96,12 +96,11 @@ export default function CameraScreen ({ navigation }, props) {
         // TODO: Fix this
         setIdentifiedAs(identifiedImage);
         let name = identifiedImage;
-        // console.log(name);
 
         setLoading(false);
         if (name.toLowerCase() in wordDict)
             Alert.alert(
-                name + ' is ' + wordDict[name.toLowerCase()] + ' in romanian',
+                name + ' is ' + wordDict[name.toLowerCase()] + ' in Romanian',
                 '',
                 {
                     cancelable: false,
