@@ -4,7 +4,7 @@ node_js:
   - lts/*
 
 before_script:
-  - yarn install -g npm@latest
+  - yarn install 
 script:
   - yarn ci
  
