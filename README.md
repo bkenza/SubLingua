@@ -1,5 +1,7 @@
 # SubLingua 📚
 
+[![Build Status](https://travis-ci.com/bkenza/SubLingua.svg?branch=master)](https://travis-ci.com/bkenza/SubLingua)
+
 ## Course 
 
 * SOEN357: User Interface Design
